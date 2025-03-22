@@ -8,6 +8,9 @@
 #ifndef ENTOSYSTEM_INCLUDES_HPP
 #define ENTOSYSTEM_INCLUDES_HPP
 
+#include <SDL3/SDL.h>
+#include <SDL3/SDL_main.h>
+
 #include <filesystem>
 #include <fstream>
 #include <iostream>

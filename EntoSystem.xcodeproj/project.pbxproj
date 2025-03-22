@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		034B04BC2D8F178A007CBCCD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 034B04BB2D8F178A007CBCCD /* README.md */; };
 		034B04BE2D8F17AE007CBCCD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 034B04BD2D8F17AE007CBCCD /* LICENSE */; };
+		03C0B1F32D8F27AE0050959E /* SDL3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C0B1F22D8F27AE0050959E /* SDL3.xcframework */; };
+		03C0B1F42D8F27AE0050959E /* SDL3.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03C0B1F22D8F27AE0050959E /* SDL3.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,11 +23,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		03C0B1F52D8F27AE0050959E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03C0B1F42D8F27AE0050959E /* SDL3.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		034B04942D8EFE05007CBCCD /* EntoSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntoSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034B04B22D8F16F2007CBCCD /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		034B04BB2D8F178A007CBCCD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		034B04BD2D8F17AE007CBCCD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		03C0B1F22D8F27AE0050959E /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3.xcframework; path = ../../../../../../opt/homebrew/Cellar/SDL3.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C0B1F32D8F27AE0050959E /* SDL3.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +96,7 @@
 				034B04B32D8F16F2007CBCCD /* tests */,
 				034B04BB2D8F178A007CBCCD /* README.md */,
 				034B04BD2D8F17AE007CBCCD /* LICENSE */,
+				03C0B1F12D8F27AE0050959E /* Frameworks */,
 				034B04952D8EFE05007CBCCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +110,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		03C0B1F12D8F27AE0050959E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03C0B1F22D8F27AE0050959E /* SDL3.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +128,7 @@
 				034B04902D8EFE05007CBCCD /* Sources */,
 				034B04912D8EFE05007CBCCD /* Frameworks */,
 				034B04922D8EFE05007CBCCD /* Resources */,
+				03C0B1F52D8F27AE0050959E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
