@@ -20,4 +20,9 @@ namespace fs = std::filesystem;
 using std::cout, std::cerr, std::endl;
 using std::string, std::ios;
 
+struct vector {
+	float x, y;
+	vector(float x, float y) : x(x), y(y) {}
+};
+
 #endif /* ENTOSYSTEM_INCLUDES_HPP */

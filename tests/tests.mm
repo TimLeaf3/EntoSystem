@@ -14,8 +14,7 @@
 @implementation tests
 
 - (void)testExample {
-
-	XCTAssertEqual(1, (3 - 2));
+	// This is an example of a functional test case.
 }
 
 @end

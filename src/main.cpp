@@ -6,12 +6,12 @@
 //
 
 #include "includes.hpp"
+#include "game.hpp"
 
 int main() {
-
-    cout << "Hello World!" << endl;
-
-    cout << "Press enter to continue..." << endl;
+    std::unique_ptr<Game> game = std::make_unique<Game>();
+    
+    game->loop();
 
     return 0;
 }
