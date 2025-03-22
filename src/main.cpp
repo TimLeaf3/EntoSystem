@@ -11,5 +11,7 @@ int main() {
 
     cout << "Hello World!" << endl;
 
+    cout << "Press enter to continue..." << endl;
+
     return 0;
 }
