@@ -5,8 +5,8 @@
 //  Created by Tim Le Flem on 22/03/2025.
 //
 
-#ifndef game_hpp
-#define game_hpp
+#ifndef ENTOSYSTEM_GAME_HPP
+#define ENTOSYSTEM_GAME_HPP
 
 #include "includes.hpp"
 
@@ -33,4 +33,4 @@ struct Game {
 	void close();
 };
 
-#endif /* game_hpp */
+#endif /* ENTOSYSTEM_GAME_HPP */
