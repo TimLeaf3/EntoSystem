@@ -13,7 +13,7 @@
 
 class Insect {
   protected:
-	vector pos{};
+	vector pos{0, 0};
 
   public:
 	Insect(vector _pos) : pos(_pos) {}

@@ -8,15 +8,12 @@
 #include "terrain.hpp"
 
 void ter::generate(SDL_Renderer *renderer) {
-    for (int i = 0; i < Game::w(); i += ter::size) {
-        for (int j = 0; j < Game::h(); j += ter::size) {
+    for (int i = 0; i < Game::w(); i += ter::tileSize) {
+        for (int j = 0; j < Game::h(); j += ter::tileSize) {
 
-            if ((i / ter::size) % 5 == 0 && (j / ter::size) % 5 == 0) {
-
-                SDL_FRect rect = {(float)i, (float)j, ter::size, ter::size};
-                SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-                SDL_RenderFillRect(renderer, &rect);
-            }
+            SDL_FRect rect = {(float)i, (float)j, ter::tileSize, ter::tileSize};
+            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_RenderFillRect(renderer, &rect);
         }
     }
 }
