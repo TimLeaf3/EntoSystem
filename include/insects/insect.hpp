@@ -16,8 +16,9 @@ class Insect {
 	vector pos{0, 0};
 
   public:
-	Insect(vector _pos) : pos(_pos) {}
+	static std::unique_ptr<std::vector<Insect>> insects;
 
+	Insect(vector _pos) : pos(_pos) {}
 	void render(SDL_Renderer *renderer);
 };
 

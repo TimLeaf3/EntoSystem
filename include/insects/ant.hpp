@@ -13,7 +13,12 @@
 #include "insect.hpp"
 
 class Ant : Insect {
-	//
+  private:
+	SDL_Texture *texture;
+
+  public:
+	Ant(vector _pos) : Insect(_pos) {}
+	void render(SDL_Renderer *renderer);
 };
 
 #endif /* ENTOSYSTEM_ANT_HPP */

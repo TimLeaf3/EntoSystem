@@ -29,7 +29,6 @@ __EntoSystem__ is a strategy game where players control an insect colony, managi
 - [] __Events__		:  Random events will affect the colony‘s growth and resources.
 
 
-
 ## Setup and Installation
 
 // 
