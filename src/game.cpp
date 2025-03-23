@@ -6,6 +6,9 @@
 //
 
 #include "game.hpp"
+#include "terrain.hpp"
+
+const vector Game::windowSize = {820, 620};
 
 int Game::loop() {
     if (!init()) {
@@ -69,6 +72,8 @@ void Game::render() {
     SDL_RenderClear(renderer);
 
     // Render game here
+
+    ter::generate(renderer);
 
     // End of rendering
 

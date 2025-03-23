@@ -19,7 +19,7 @@ struct Game {
 	SDL_Event event;
 	bool runs{false};
 
-	vector windowSize{800, 600};
+	const static vector windowSize;
 
   public:
 	int loop();
@@ -31,6 +31,10 @@ struct Game {
 	void render();
 
 	void close();
+
+	//
+	static float w() { return Game::windowSize.x; }
+	static float h() { return Game::windowSize.y; }
 };
 
 #endif /* ENTOSYSTEM_GAME_HPP */

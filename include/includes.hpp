@@ -22,7 +22,7 @@ using std::string, std::ios;
 
 struct vector {
 	float x, y;
-	vector(float x, float y) : x(x), y(y) {}
+	vector(float _x = 0.f, float _y = 0.f) : x(_x), y(_y) {}
 };
 
 #endif /* ENTOSYSTEM_INCLUDES_HPP */
