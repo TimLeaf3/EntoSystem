@@ -7,9 +7,16 @@
 
 #include "ant.hpp"
 
-void Ant::render(SDL_Renderer *renderer) {
+std::unique_ptr<std::vector<Ant>> Ant::ants =
+    std::make_unique<std::vector<Ant>>();
 
-    SDL_FRect rect = {pos.x, pos.y, 16, 16};
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-    SDL_RenderFillRect(renderer, &rect);
+Ant::Ant(vector _pos) : Insect(_pos) {
+    texture =
+        IMG_LoadTexture(Game::renderer, "Documents/assets/insects/ant.bmp");
+}
+
+void Ant::addAnt() { Ant::ants->push_back(*this); }
+
+void Ant::render(SDL_Renderer *renderer) {
+    SDL_RenderTexture(Game::renderer, texture, nullptr, &shape);
 }

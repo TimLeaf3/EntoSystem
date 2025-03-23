@@ -6,7 +6,6 @@
 //
 
 #include "game.hpp"
-#include "terrain.hpp"
 
 const vector Game::windowSize = {820, 620};
 
@@ -25,6 +24,11 @@ int Game::loop() {
     return 0;
 }
 
+SDL_Window *Game::window = SDL_CreateWindow("EntoSystem", windowSize.x,
+                                            windowSize.y, SDL_WINDOW_RESIZABLE);
+
+SDL_Renderer *Game::renderer = SDL_CreateRenderer(window, nullptr);
+
 bool Game::init() {
 
     if (!SDL_Init(SDL_INIT_VIDEO)) {
@@ -32,15 +36,12 @@ bool Game::init() {
         return false;
     }
 
-    window = SDL_CreateWindow("EntoSystem", windowSize.x, windowSize.y,
-                              SDL_WINDOW_RESIZABLE);
     if (window == nullptr) {
         cerr << "SDL_CreateWindow Error: " << SDL_GetError() << endl;
         SDL_Quit();
         return false;
     }
 
-    renderer = SDL_CreateRenderer(window, nullptr);
     if (renderer == nullptr) {
         cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << endl;
         SDL_DestroyWindow(window);
@@ -74,6 +75,8 @@ void Game::render() {
     // Render game here
 
     ter::generate(renderer);
+
+    Insect::render(renderer);
 
     // End of rendering
 

@@ -10,14 +10,13 @@
 
 #include "game.hpp"
 #include "includes.hpp"
+#include "terrain.hpp"
 
 namespace ter {
 
 constexpr static int tileSize = 16;
 void generate(SDL_Renderer *renderer);
 
-
-	
 }; // namespace ter
 
 #endif /* ENTOSYSTEM_TERRAIN_HPP */

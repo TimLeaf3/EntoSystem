@@ -13,11 +13,17 @@
 #include "insect.hpp"
 
 class Ant : Insect {
+  public:
+	static std::unique_ptr<std::vector<Ant>> ants;
+
   private:
 	SDL_Texture *texture;
+	float size = 10;
+	SDL_FRect shape{pos.x, pos.y, size, size};
 
   public:
-	Ant(vector _pos) : Insect(_pos) {}
+	Ant(vector _pos);
+	void addAnt();
 	void render(SDL_Renderer *renderer);
 };
 

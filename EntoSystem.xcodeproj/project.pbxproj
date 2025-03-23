@@ -50,11 +50,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		033DC6212D90384500D4583B /* assets */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = assets;
-			sourceTree = "<group>";
-		};
 		034B04962D8EFE05007CBCCD /* utils */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = utils;
@@ -103,7 +98,6 @@
 				034B04962D8EFE05007CBCCD /* utils */,
 				034B04A82D8EFE15007CBCCD /* src */,
 				034B04A72D8EFE12007CBCCD /* include */,
-				033DC6212D90384500D4583B /* assets */,
 				034B04B32D8F16F2007CBCCD /* tests */,
 				034B04BB2D8F178A007CBCCD /* README.md */,
 				034B04BD2D8F17AE007CBCCD /* LICENSE */,
@@ -147,7 +141,6 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				033DC6212D90384500D4583B /* assets */,
 				034B04962D8EFE05007CBCCD /* utils */,
 				034B04A72D8EFE12007CBCCD /* include */,
 				034B04A82D8EFE15007CBCCD /* src */,

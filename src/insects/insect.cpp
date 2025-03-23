@@ -6,10 +6,10 @@
 //
 
 #include "insect.hpp"
-
-std::unique_ptr<std::vector<Insect>> Insect::insects =
-    std::make_unique<std::vector<Insect>>();
+#include "ant.hpp"
 
 void Insect::render(SDL_Renderer *renderer) {
-    //
+    for (auto &ant : *Ant::ants) {
+        ant.render(renderer);
+    }
 }

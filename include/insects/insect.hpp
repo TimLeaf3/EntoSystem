@@ -19,7 +19,7 @@ class Insect {
 	static std::unique_ptr<std::vector<Insect>> insects;
 
 	Insect(vector _pos) : pos(_pos) {}
-	void render(SDL_Renderer *renderer);
+	static void render(SDL_Renderer *renderer);
 };
 
 #endif /* ENTOSYSTEM_INSECT_HPP */

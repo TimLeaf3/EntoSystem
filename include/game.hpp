@@ -9,12 +9,15 @@
 #define ENTOSYSTEM_GAME_HPP
 
 #include "includes.hpp"
+#include "insect.hpp"
+#include "terrain.hpp"
 
 struct Game {
-  private:
-	SDL_Window *window;
-	SDL_Renderer *renderer;
+  public:
+	static SDL_Window *window;
+	static SDL_Renderer *renderer;
 
+  private:
 	SDL_Color back{33, 38, 49};
 	SDL_Event event;
 	bool runs{false};
