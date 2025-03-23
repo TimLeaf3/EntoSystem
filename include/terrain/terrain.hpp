@@ -13,9 +13,11 @@
 
 namespace ter {
 
-constexpr static int size = 20;
+constexpr static int tileSize = 16;
 void generate(SDL_Renderer *renderer);
 
+
+	
 }; // namespace ter
 
 #endif /* ENTOSYSTEM_TERRAIN_HPP */

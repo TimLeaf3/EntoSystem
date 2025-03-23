@@ -6,3 +6,10 @@
 //
 
 #include "insect.hpp"
+
+void Insect::render(SDL_Renderer *renderer) {
+
+    SDL_FRect rect = {pos.x, pos.y, 16, 16};
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    SDL_RenderFillRect(renderer, &rect);
+}

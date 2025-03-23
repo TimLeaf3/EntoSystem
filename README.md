@@ -5,7 +5,6 @@
 __EntoSystem__ is a strategy game where players control an insect colony, managing resources, growth, and survival while competing with other colonies.
 
 
-
 ## Features
 
 - [] __Colony Control__			:  The player manages a ant colony, managing resources allocations, growth, and defense.
@@ -15,7 +14,6 @@ __EntoSystem__ is a strategy game where players control an insect colony, managi
 - [] __Dynamic Ecosystem__		:  Other colonies will respond to the player‘s  actions — if provoked, they will fight back.
 
 
-
 ## Gameplay
 
 - __Resources__		:  Ensure a steady supply of food and shelter for the colony to thrive.
@@ -23,11 +21,18 @@ __EntoSystem__ is a strategy game where players control an insect colony, managi
 - __Decisions__		:  The player will decide the colony‘s growth strategy, resources allocation, and defensive strategy.
 
 
+## To Implement
+
+- [] __Terrain__	:  Different terrains will offer different challenges and resources.
+- [] __Weather__	:  Weather conditions will affect the colony‘s resources and growth.
+- [] __Seasons__	:  The game will have seasons that will affect the colony‘s growth and resources.
+- [] __Events__		:  Random events will affect the colony‘s growth and resources.
+
+
 
 ## Setup and Installation
 
 // 
-
 
 
 ## License
