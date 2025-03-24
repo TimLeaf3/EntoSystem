@@ -7,13 +7,20 @@
 
 #include "terrain.hpp"
 
-void ter::generate(SDL_Renderer *renderer) {
-    for (int i = 0; i < Game::w(); i += ter::tileSize) {
-        for (int j = 0; j < Game::h(); j += ter::tileSize) {
+void Terrain::init() {
+    loadedTexture = IMG_Load("Documents/assets/terrain/dirt.png");
+    dirt = SDL_CreateTextureFromSurface(Game::renderer, loadedTexture);
 
-            SDL_FRect rect = {(float)i, (float)j, ter::tileSize, ter::tileSize};
-            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-            SDL_RenderFillRect(renderer, &rect);
+    SDL_SetTextureScaleMode(dirt, SDL_SCALEMODE_NEAREST);
+
+    SDL_DestroySurface(loadedTexture);
+}
+
+void Terrain::generate(SDL_Renderer *renderer) {
+    for (int x = 0; x < Game::w(); x += tileSize) {
+        for (int y = 0; y < Game::h(); y += tileSize) {
+            shape = {(float)x, (float)y, tileSize, tileSize};
+            SDL_RenderTexture(renderer, dirt, nullptr, &shape);
         }
     }
 }
