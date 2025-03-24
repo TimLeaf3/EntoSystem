@@ -13,7 +13,7 @@ int Game::loop() {
     if (!init()) {
         return -1;
     }
-    
+
     while (runs) {
         handleEvents();
         update();
@@ -68,13 +68,15 @@ void Game::update() {
     // End of game logic
 }
 
+Terrain ter{};
+
 void Game::render() {
     SDL_SetRenderDrawColor(renderer, back.r, back.g, back.b, 255);
     SDL_RenderClear(renderer);
 
     // Render game here
 
-    ter::generate(renderer);
+    ter.generate(renderer);
 
     Insect::render(renderer);
 

@@ -12,14 +12,18 @@
 #include "includes.hpp"
 #include "terrain.hpp"
 
-struct ter {
-	
+class Terrain {
+
   public:
 	constexpr static int tileSize = 16;
-	static SDL_Texture dirt;
 
+	SDL_FRect shape;
 
-	static void generate(SDL_Renderer *renderer);
+	SDL_Surface *loadedTexture;
+	SDL_Texture *dirt;
+
+	void init();
+	void generate(SDL_Renderer *renderer);
 
 }; // namespace ter
 

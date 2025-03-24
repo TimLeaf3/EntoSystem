@@ -20,10 +20,9 @@ class Ant : Insect {
 	SDL_Surface *loadedSurface;
 	SDL_Texture *texture;
 
-	static constexpr float scaleFactor = 5.0f;
-
 	float size = 10;
-	SDL_FRect shape{pos.x, pos.y, size *scaleFactor, size *scaleFactor};
+	float angle = 45;
+	SDL_FRect shape{pos.x, pos.y, size *scaleFactor / 1.1f, size *scaleFactor};
 
   public:
 	Ant(vector _pos);
