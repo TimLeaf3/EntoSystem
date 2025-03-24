@@ -17,9 +17,13 @@ class Ant : Insect {
 	static std::unique_ptr<std::vector<Ant>> ants;
 
   private:
+	SDL_Surface *loadedSurface;
 	SDL_Texture *texture;
+
+	static constexpr float scaleFactor = 5.0f;
+
 	float size = 10;
-	SDL_FRect shape{pos.x, pos.y, size, size};
+	SDL_FRect shape{pos.x, pos.y, size *scaleFactor, size *scaleFactor};
 
   public:
 	Ant(vector _pos);

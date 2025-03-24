@@ -13,7 +13,7 @@ int Game::loop() {
     if (!init()) {
         return -1;
     }
-
+    
     while (runs) {
         handleEvents();
         update();
