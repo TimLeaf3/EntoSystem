@@ -11,8 +11,11 @@ std::unique_ptr<std::vector<Ant>> Ant::ants =
     std::make_unique<std::vector<Ant>>();
 
 Ant::Ant(vector _pos) : Insect(_pos) {
-    texture =
-        IMG_LoadTexture(Game::renderer, "Documents/assets/insects/ant.bmp");
+    loadedSurface = IMG_Load("Documents/assets/insects/ant.png");
+
+    texture = SDL_CreateTextureFromSurface(Game::renderer, loadedSurface);
+
+    (SDL_SetTextureScaleMode(texture, SDL_SCALEMODE_NEAREST));
 }
 
 void Ant::addAnt() { Ant::ants->push_back(*this); }
