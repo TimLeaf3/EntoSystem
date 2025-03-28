@@ -12,11 +12,17 @@
 int main() {
     std::unique_ptr<Game> game = std::make_unique<Game>();
 
-    std::unique_ptr<Ant> ant = Ant::create({90, 90});
-    ant->addAnt();
+    for (int i = 0; i < 10; i++) {
+        int x = (30 + std::rand() % (800 - 30 + 1));
+        int y = (30 + std::rand() % (800 - 30 + 1));
+
+        std::unique_ptr<Ant> ant = Ant::create({float(x), float(y)});
+        ant->addAnt();
+    }
 
     for (auto &a : *Ant::ants) {
-        a->rotate(50);
+        int r = (0 + std::rand() % (360 - 0 + 1));
+        a->rotate(r);
     }
 
     game->loop();
