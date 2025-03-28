@@ -7,14 +7,26 @@
 
 #import <XCTest/XCTest.h>
 
+#include "includes.hpp"
+
 @interface tests : XCTestCase
 
 @end
 
 @implementation tests
 
-- (void)testExample {
-	// This is an example of a functional test case.
+- (void)testVector1 {
+	vector V;
+
+	XCTAssertEqual(V.x, 0.f);
+	XCTAssertEqual(V.y, 0.f);
+}
+
+- (void)testVector2 {
+	vector V{1, 2};
+
+	XCTAssertEqual(V.x, 1.f);
+	XCTAssertEqual(V.y, 2.f);
 }
 
 @end

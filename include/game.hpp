@@ -10,7 +10,7 @@
 
 #include "includes.hpp"
 #include "insect.hpp"
-#include "terrain.hpp"
+#include "map.hpp"
 
 struct Game {
   public:

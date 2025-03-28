@@ -12,8 +12,12 @@
 int main() {
     std::unique_ptr<Game> game = std::make_unique<Game>();
 
-    Ant x = Ant({Game::w() / 2, Game::h() / 2});
-    x.addAnt();
+    std::unique_ptr<Ant> ant = Ant::create({90, 90});
+    ant->addAnt();
+
+    for (auto &a : *Ant::ants) {
+        a->rotate(50);
+    }
 
     game->loop();
 

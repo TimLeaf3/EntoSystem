@@ -68,15 +68,22 @@ void Game::update() {
     // End of game logic
 }
 
-Terrain ter{};
+Map grid = Map({{1, 1, 1, 1, 1, 1, 1},   //
+                {1, 2, 0, 0, 0, 0, 1},   //
+                {1, 0, 0, 0, 2, 0, 1},   //
+                {1, 0, 0, 0, 0, 0, 1},   //
+                {1, 0, 0, 2, 0, 0, 1},   //
+                {1, 0, 0, 0, 0, 0, 1},   //
+                {1, 0, 0, 0, 2, 0, 1},   //
+                {1, 1, 1, 1, 1, 1, 1}}); //
 
 void Game::render() {
-    SDL_SetRenderDrawColor(renderer, back.r, back.g, back.b, 255);
+    SDL_SetRenderDrawColor(renderer, back.r, back.g, back.b, 0 /*255*/);
     SDL_RenderClear(renderer);
 
     // Render game here
 
-    ter.generate(renderer);
+    grid.render(renderer);
 
     Insect::render(renderer);
 

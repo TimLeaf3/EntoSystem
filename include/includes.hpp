@@ -25,6 +25,6 @@ struct vector {
 	vector(float _x = 0.f, float _y = 0.f) : x(_x), y(_y) {}
 };
 
-constexpr float scaleFactor = 6.0f;
+constexpr float scaleFactor = 4.0f;
 
 #endif /* ENTOSYSTEM_INCLUDES_HPP */
